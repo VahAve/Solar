@@ -1,0 +1,43 @@
+/*colors*/
+$gray: #868585;
+$white: #ffffff;
+$black: #303030;
+$hover: #A9A32A;
+
+/*font-family*/
+$noto: 'Noto Sans', sans-serif;
+
+/*button*/
+%button {
+   font-size: 35px;
+   color: $white;
+   border: 1px solid $white;
+   border-radius: 50%;
+   padding: 20px;
+   position: relative;
+   transition: all .3s linear;
+   &::after {
+      content: "записаться на консультацию";
+      position: absolute;
+      top: 60%;
+      left: 50%;
+      width: 260px;
+      z-index: 5;
+      font-size: 18px;
+   }
+   &:hover {
+      background-color: $hover;
+   }
+
+   @media(max-width: 768px) {
+      &::after {
+         top: 65%;
+         transform: translateX(-50%);
+      }
+   }
+   @media(max-width: 425px) {
+      &::after {
+         font-size: 13px;
+      }
+   }
+}

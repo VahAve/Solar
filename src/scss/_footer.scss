@@ -1,0 +1,147 @@
+.footer {
+   background: url(../../src/img/footerbg.jpg) no-repeat top center;
+   background-size: cover;
+   padding: 70px 0;
+
+   &__inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 150px;
+   }
+
+   &__forms {
+      width: 100%;
+      max-width: 510 / 1220 * 100%;
+   }
+
+   &__title {
+      font-weight: 700;
+      text-transform: uppercase;
+      font-size: 24px;
+      margin-bottom: 60px;
+      color: $white;
+   }
+
+   &__form-input {
+      border: none;
+      background-color: transparent;
+      border-bottom: 1px solid $white;
+      padding-bottom: 5px;
+      width: 95%;
+      height: 60px;
+      margin-bottom: 60px;
+   }
+
+   &__from-btn {
+      @extend %button;
+      &::after {
+         content: "оставить заявку";
+         width: 150px;
+      }
+   }
+
+   &__infos {
+      width: 100%;
+      max-width: 600 / 1220 * 100%;
+      color: $white;
+   }
+
+   &__info-items {
+      margin-bottom: 30px;
+   }
+
+
+
+   &__info-item {
+      font-size: 18px;
+      & + & {
+         margin-bottom: 10px;
+      }
+   }
+
+   &__end {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+   }
+
+   &__privacy {
+      font-size: 14px;
+      color: $white;
+   }
+
+
+   &__social .fab {
+      font-size: 25px;
+      color: $white;
+      margin-right: 10px;
+   }
+
+   @media(max-width: 768px) {
+      &__inner {
+         flex-direction: column;
+         align-items: center;
+      }
+      &__forms {
+         max-width: 100%;
+         margin-bottom: 50px;
+      }
+      &__form {
+         display: flex;
+         flex-wrap: wrap;
+         justify-content: space-between;
+      }
+      &__form-input {
+         width: 100%;
+         max-width: 48%;
+      }
+      &__from-btn::after {
+         transform: none;
+      }
+      &__infos {
+         max-width: 100%;
+      }
+      &__info {
+         display: flex;
+         flex-wrap: wrap;
+         justify-content: space-between;
+      }
+      &__info-items {
+         width: 100%;
+         max-width: 50%;
+         &:nth-child(1),
+         &:nth-child(3) {
+            padding-right: 15px;
+         }
+      }
+      &__end {
+         display: block;
+         text-align: center;
+      }
+      &__privacy {
+         margin-bottom: 30px;
+         font-size: 16px;
+      }
+      &__logo {
+         margin-bottom: 30px;
+      }
+
+   }
+   
+   @media(max-width: 425px) {
+      &__form-input {
+         max-width: 100%;
+         margin-bottom: 30px;
+      }
+      &__info-items {
+         max-width: 100%;
+         text-align: center;
+         &:nth-child(1),
+         &:nth-child(3) {
+            padding-right: 0;
+         }
+      }
+   }
+}
+

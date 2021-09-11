@@ -1,0 +1,48 @@
+body {
+   margin: 0;
+   font-family: $noto;
+   color: $black;
+   font-size: 14px;
+   height: 100%;
+}
+
+*,
+*::before,
+*::after {
+   box-sizing: border-box;
+}
+
+h1,h2,h3,h4,h5,h6,p {
+   margin: 0;
+   font-size: inherit;
+   font-weight: inherit;
+   font-style: inherit;
+   color: inherit;
+}
+
+.container {
+   width: 100%;
+   max-width: 1220px;
+   margin: 0 auto;
+   padding: 0px 10px;
+}
+
+.section {
+   margin-bottom: 150px;
+
+   &__title {
+      font-weight: 700;
+      font-size: 24px;
+      text-transform: uppercase;
+      color: $gray;
+      margin-bottom: 60px;
+   }
+
+   @media(max-width: 425px) {
+      margin-bottom: 100px;
+      &__title {
+         font-size: 18px;
+         margin-bottom: 50px;
+      }
+   }
+}
